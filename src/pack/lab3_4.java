@@ -1,6 +1,6 @@
 package pack;
 
-public class lab3 {
+public class lab3_4 {
 
 	public static void main(String[] args) {
 		Carlson carlson = new Carlson("Carlson");
