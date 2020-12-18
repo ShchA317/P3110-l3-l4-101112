@@ -1,7 +1,7 @@
 package pack;
 
 public abstract class Creature implements shielded{
-	private String name;
+	private final String name;
 	
 	public Creature(String name) {
 		this.name = name;
@@ -12,9 +12,15 @@ public abstract class Creature implements shielded{
 	}
 	
 	public void push(Creature c) {
-		System.out.println(this.toString() + " push " +c.toString());
+		System.out.println(this.toString() + " push " + c.toString());
 	}
-	
+
+	public void go(){System.out.println(this.toString() + " is coming");}
+
+	public void comeClose(Object obj){
+		System.out.println(this.toString() + "comeClose to" + obj.toString());
+	}
+
 	@Override
 	public String toString(){
 		return this.getName();

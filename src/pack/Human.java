@@ -33,5 +33,5 @@ public class Human extends Creature{
 }
 
 enum Condition{
-	NORMAL, IRRITATED	
+	NORMAL, IRRITATED
 } 
