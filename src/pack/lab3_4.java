@@ -6,17 +6,27 @@ public class lab3_4 {
 		Carlson carlson = Carlson.getInstance();
 		TV tv = new TV("TV");
 		Human baby = new Human("Baby");
-		
-		
+		Human oldster = new Human("oldster");
+		Human announcer = new Human("announcer");
+		Human sirs = new Human("gentlemen");
+
+
+		carlson.comeClose(tv);
+		carlson.kneeldown();
+		carlson.lookedAt(tv);
+
+		baby.explainClass();
+
+
+
 		announcer.smile();
 		carlson.smile(announcer);
 		
 		carlson.push(baby);
-		announcer.disappeared(tv);
-		
-		sirs.appeared(tv);
-		sirs.talk();
-		
+		tv.setPicture(sirs);
 		carlson.pushButtons(tv);
+
+		carlson.switchOff(tv);
+		baby.becameAlarmed();
 	}
 }

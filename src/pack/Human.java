@@ -30,7 +30,7 @@ public class Human extends Creature implements ableToInteractWithTV{
 	@Override
 	public void pushButtons(TV tv) {
 		System.out.println(this.toString() + " push all buttons of " + tv.toString());
-		tv.toPushOnOneOfButtons();
+		tv.pushOnOneOfButtons();
 	}
 
 	@Override

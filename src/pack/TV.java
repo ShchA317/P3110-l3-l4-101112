@@ -1,6 +1,6 @@
 package pack;
 
-public class TV<protacted> {
+public class TV {
 	String name;
 	
 	public TV(String name) {
@@ -15,22 +15,26 @@ public class TV<protacted> {
 
 	Shield shield = new Shield();
 
-	public void toPushOnOneOfButtons() {
+	public void pushOnOneOfButtons() {
 		shield.editPicture();
 	}
 
-	protected class Shield{
+	public void setPicture(shielded picture){
+		shield.setPicture(picture);
+	}
+
+	class Shield{
 		private shielded picture;
-		private String name = "shield";
+		private String name = "screen";
 
 		public void setPicture(shielded picture) {
-			System.out.println(this.picture.toString() + " disappear on " + this.toSting());
+			System.out.println(this.picture.toString() + " disappear on the " + this.toSting());
 			this.picture = picture;
-			System.out.println(this.picture.toString() + " appear on " + this.toSting());
+			System.out.println(this.picture.toString() + " appear on the " + this.toSting());
 		}
 
 		public void editPicture(){
-			System.out.println();
+			System.out.println("picture was be edited");
 		}
 
 		private String toSting() {
