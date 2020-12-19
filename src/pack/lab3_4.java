@@ -5,9 +5,7 @@ public class lab3_4 {
 	public static void main(String[] args) {
 		Carlson carlson = Carlson.getInstance();
 		TV tv = new TV("TV");
-		TVperson announcer = new TVperson("announcer");
 		Human baby = new Human("Baby");
-		TVperson sirs = new TVperson("serious and fat gentelmen");
 		
 		
 		announcer.smile();

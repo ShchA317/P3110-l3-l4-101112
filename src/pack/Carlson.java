@@ -4,16 +4,16 @@ public final class Carlson extends Human {
 	private static Carlson instance;
     private Carlson(String name){super(name); }
     
-    public static Carlson getInstance(){ // #3
+    public static Carlson getInstance(){
     if(instance == null){
         instance = new Carlson("Carlson");	
         }
     return instance;
     }
-    
-    public static void beIrritated() {
-		instance.condition = Condition.IRRITATED;
-		System.out.println("Carlson became irritated");
-	}
-    
+
+    @Override
+    public void editPicture(TV tv) {
+        System.out.println(this.toString() + " changes the picture settings in the " + tv.toString());
+        toHappiness();
+    }
 }

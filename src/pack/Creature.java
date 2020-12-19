@@ -18,7 +18,7 @@ public abstract class Creature implements shielded{
 	public void go(){System.out.println(this.toString() + " is coming");}
 
 	public void comeClose(Object obj){
-		System.out.println(this.toString() + "comeClose to" + obj.toString());
+		System.out.println(this.toString() + "come close to " + obj.toString());
 	}
 
 	@Override

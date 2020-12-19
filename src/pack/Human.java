@@ -1,11 +1,14 @@
 package pack;
 
-public class Human extends Creature{
+public class Human extends Creature implements ableToInteractWithTV{
 
 	public Human(String name) {
 		super(name);
 		condition = Condition.NORMAL;
 	}
+
+	private Condition condition;
+
 	public void smile() {
 		System.out.println(this.toString() + " smiles");
 	}
@@ -15,23 +18,35 @@ public class Human extends Creature{
 	public void talk() {
 		System.out.println(this.toString() + " talking");
 	}
-	
+	public void toAnnoy(){
+		condition = Condition.IRRITATED;
+		System.out.println(this.toString() + " become irritated");
+	}
+	public void toHappiness(){
+		condition = Condition.PLEASED;
+		System.out.println(this.toString() + " become pleased");
+	}
+
+	@Override
 	public void pushButtons(TV tv) {
 		System.out.println(this.toString() + " push all buttons of " + tv.toString());
+		tv.toPushOnOneOfButtons();
 	}
-	
-	public Condition condition;
 
 	@Override
-	public void appeared(TV tv) {
-
+	public void talkAndTalk(TV tv, Human human){	//может выкинуть исключение?
+		System.out.println(this.toString() + " talk and talk on " + tv.toString());
+		human.toAnnoy();
 	}
+
 	@Override
-	public void disappeared(TV tv) {
-		
-	}	
+	public void editPicture(TV tv) {
+		System.out.println(this.toString() + " changes the picture settings in the " + tv.toString());
+	}
+
+
 }
 
 enum Condition{
-	NORMAL, IRRITATED
+	NORMAL, IRRITATED, PLEASED
 } 
