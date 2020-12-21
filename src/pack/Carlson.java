@@ -4,7 +4,7 @@ public final class Carlson extends Human {
 	private static Carlson instance;
     private Carlson(String name){super(name); }
     
-    public static Carlson getInstance(){
+    public static Carlson getCarlson(){
     if(instance == null){
         instance = new Carlson("Carlson");	
         }

@@ -20,7 +20,8 @@ public class TV {
 	}
 
 	public void setPicture(shielded picture){
-		shield.setPicture(picture);
+		try {shield.setPicture(picture); }
+		catch (lackOfPicturesException ex){shield.picture = picture; }
 	}
 
 	class Shield{
@@ -28,9 +29,10 @@ public class TV {
 		private String name = "screen";
 
 		public void setPicture(shielded picture) {
+			if(this.picture == null){throw new lackOfPicturesException();}
 			System.out.println(this.picture.toString() + " disappear on the " + this.toSting());
 			this.picture = picture;
-			System.out.println(this.picture.toString() + " appear on the " + this.toSting());
+			System.out.println(this.picture.toFullString() + " appear on the " + this.toSting());
 		}
 
 		public void editPicture(){

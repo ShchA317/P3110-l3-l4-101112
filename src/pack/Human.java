@@ -6,6 +6,10 @@ public class Human extends Creature implements ableToInteractWithTV{
 		super(name);
 		condition = Condition.NORMAL;
 	}
+	public Human(String name, String characteristic){
+		super(name, characteristic);
+		condition = Condition.NORMAL;
+	}
 
 	private Condition condition;
 
@@ -34,9 +38,8 @@ public class Human extends Creature implements ableToInteractWithTV{
 	}
 
 	@Override
-	public void talkAndTalk(TV tv, Human human){	//может выкинуть исключение?
-		System.out.println(this.toString() + " talk and talk on " + tv.toString());
-		human.toAnnoy();
+	public void talkAndTalk(){
+		System.out.println(this.toString() + " talk and talk");
 	}
 
 	@Override
