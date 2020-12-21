@@ -21,7 +21,16 @@ public abstract class Creature implements shielded{
 	public void go(){System.out.println(this.toString() + " is coming");}
 
 	public void comeClose(Object obj){
-		System.out.println(this.toString() + "come close to " + obj.toString());
+		System.out.println(this.toString() + " come close to " + obj.toString());
+		if(obj instanceof TV){
+			if(((TV) obj).getPicture() instanceof Human) System.out.println
+						(this.toString() + " pressed his nose to " + ((TV) obj).getPicture().toString() + "'s nose");
+			else System.out.println(this.toString() + " pressed his nose to" + ((TV) obj).getPicture());
+		}
+	}
+
+	public void lookedAt(Object obj){
+		System.out.println(this.toString() + " looked at " + obj.toString());
 	}
 
 	@Override

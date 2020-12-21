@@ -24,6 +24,10 @@ public class TV {
 		catch (lackOfPicturesException ex){shield.picture = picture; }
 	}
 
+	public shielded getPicture(){
+		return shield.picture;
+	}
+
 	class Shield{
 		private shielded picture;
 		private String name = "screen";
